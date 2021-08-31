@@ -1,0 +1,8 @@
+.modal-confirm .modal-header.modal-header__success {
+  background-color: #47c9a2;
+}
+
+.modal-confirm .icon-box {
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
