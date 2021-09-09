@@ -75,9 +75,9 @@
 <p *ngIf="isSecretPasswordEnabled" class="mt-2">Secret password = Tuna</p>
 <p
   *ngFor="let password of passwords"
-  class="mt-2"
   [ngStyle]="{ 'background-color': password >= 5 ? 'blue' : '' }"
   [ngClass]="{ 'text-white': password >= 5 }"
+  class="mt-2"
 >
   {{ password }}
 </p>
