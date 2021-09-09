@@ -14,7 +14,7 @@ export class ServersComponent implements OnInit {
   public userName = '';
   public isServerCreated = false;
   public servers = ['Testserver', 'Testserver 2'];
-  public isPasswordListEnabled = false;
+  public isSecretPasswordEnabled = false;
   public passwords = [];
 
   constructor() {}
@@ -39,7 +39,7 @@ export class ServersComponent implements OnInit {
   }
 
   onTogglePasswordList() {
-    this.isPasswordListEnabled = !this.isPasswordListEnabled;
+    this.isSecretPasswordEnabled = !this.isSecretPasswordEnabled;
     this.passwords.push(this.passwords.length + 1);
   }
 }

@@ -72,7 +72,7 @@
 <button class="btn btn-primary mt-3" (click)="onTogglePasswordList()">
   Display Details
 </button>
-<p *ngIf="isPasswordListEnabled" class="mt-2">Secret password = Tuna</p>
+<p *ngIf="isSecretPasswordEnabled" class="mt-2">Secret password = Tuna</p>
 <p
   *ngFor="let password of passwords"
   class="mt-2"
