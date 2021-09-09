@@ -10,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   public allowNewServer = false;
-  public serverCreationStatus = 'No server was created.';
   public serverName = 'Testing';
   public userName = '';
+  public isServerCreated = false;
+  public servers = ['Testserver', 'Testserver 2'];
+  public isPasswordListEnabled = false;
+  public passwords = [];
 
   constructor() {}
 
@@ -23,7 +26,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = `Server is created. Name is ${this.serverName}`;
+    this.isServerCreated = true;
+    this.servers.push(this.serverName);
   }
 
   onInputServerName(event: Event) {
@@ -32,5 +36,10 @@ export class ServersComponent implements OnInit {
 
   onResetUserName() {
     this.userName = '';
+  }
+
+  onTogglePasswordList() {
+    this.isPasswordListEnabled = !this.isPasswordListEnabled;
+    this.passwords.push(this.passwords.length + 1);
   }
 }
